@@ -3,7 +3,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -24,9 +24,8 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="lg:col-span-4 space-y-6">
               {[
-                { icon: <Mail className="w-5 h-5" />, label: "Email Support", val: "support@bharathub.in" },
-                { icon: <Phone className="w-5 h-5" />, label: "Phone", val: "+91 98765 43210" },
-                { icon: <MapPin className="w-5 h-5" />, label: "Office Address", val: "Tech Park, Bengaluru, India" }
+                { icon: <Mail className="w-5 h-5" />, label: "Email Support", val: "sonidishansh359@gmail.com" },
+                { icon: <Phone className="w-5 h-5" />, label: "Phone", val: "+91 78628 85851" },
               ].map((item, i) => (
                 <div key={i} className="card p-6 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/20 text-brand-600 flex items-center justify-center shrink-0">
@@ -55,20 +54,20 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="label-text">Full Name</label>
-                      <input type="text" placeholder="John Doe" className="input-field" />
+                      <input type="text" className="input-field" />
                     </div>
                     <div>
                       <label className="label-text">Email Address</label>
-                      <input type="email" placeholder="john@example.com" className="input-field" />
+                      <input type="email" className="input-field" />
                     </div>
                   </div>
                   <div>
                     <label className="label-text">Subject</label>
-                    <input type="text" placeholder="How can we help you?" className="input-field" />
+                    <input type="text" className="input-field" />
                   </div>
                   <div>
                     <label className="label-text">Message</label>
-                    <textarea rows={6} placeholder="Please provide details..." className="input-field resize-y"></textarea>
+                    <textarea rows={6} className="input-field resize-y"></textarea>
                   </div>
                   <div className="pt-2">
                     <button className="btn-primary w-full sm:w-auto">
