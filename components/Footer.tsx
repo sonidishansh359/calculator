@@ -22,8 +22,6 @@ const Footer = () => {
       links: [
         { name: "About Us", href: "/about" },
         { name: "Contact", href: "/contact" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" },
       ],
     },
 
@@ -47,7 +45,7 @@ const Footer = () => {
               India&apos;s most accurate and fast utility tools platform. Solving daily life problems with digital precision.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full hover:text-brand-500 transition-colors shadow-sm">
+              <Link href="mailto:sonidishansh359@gmail.com" className="p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full hover:text-brand-500 transition-colors shadow-sm">
                 <Mail className="w-4 h-4" />
               </Link>
             </div>
