@@ -85,10 +85,12 @@ const Navbar = () => {
               <div key={link.name} className="relative group">
                 <Link 
                   href={link.href}
-                  className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1 py-5"
+                  className="relative text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1 py-5 group-hover:text-brand-600 dark:group-hover:text-brand-400"
                 >
                   {link.name}
-                  {link.subLinks && <ChevronDown className="w-3.5 h-3.5 opacity-50" />}
+                  {link.subLinks && <ChevronDown className="w-3.5 h-3.5 opacity-50 transition-transform duration-300 group-hover:-rotate-180" />}
+                  {/* Advanced Hover Underline */}
+                  <span className="absolute bottom-0 left-0 w-full h-[3px] bg-brand-600 rounded-t-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
                 </Link>
                 
                 {link.subLinks && (
@@ -164,14 +166,16 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation Row - Only Visible on Small Screens */}
-        <div className="flex md:hidden items-center gap-5 overflow-x-auto no-scrollbar pb-3 pt-1 border-t border-slate-100 dark:border-slate-800/50">
+        <div className="flex md:hidden justify-center items-center gap-6 overflow-x-auto no-scrollbar pb-3 pt-3 border-t border-slate-100 dark:border-slate-800/50">
           {navLinks.map((link) => (
             <Link 
               key={link.name}
               href={link.href}
-              className="text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 whitespace-nowrap uppercase tracking-wider"
+              className="relative group text-[11px] sm:text-xs font-extrabold text-slate-600 dark:text-slate-400 hover:text-brand-600 whitespace-nowrap uppercase tracking-wider transition-colors py-1 px-1"
             >
               {link.name}
+              {/* Advanced Hover Underline */}
+              <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-brand-600 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
             </Link>
           ))}
         </div>
