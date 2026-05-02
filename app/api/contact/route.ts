@@ -72,10 +72,10 @@ export async function POST(req: NextRequest) {
   try {
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Nodemailer send error:", error);
     return NextResponse.json(
-      { error: "Failed to send email. Please try again later." },
+      { error: `Error sending email: ${error.message || String(error)}` },
       { status: 500 }
     );
   }
