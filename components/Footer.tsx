@@ -26,14 +26,7 @@ const Footer = () => {
         { name: "Terms of Service", href: "/terms" },
       ],
     },
-    {
-      title: "Support",
-      links: [
-        { name: "Help Center", href: "/help" },
-        { name: "Feedback", href: "/feedback" },
-        { name: "Report a Bug", href: "/report" },
-      ],
-    },
+
   ];
 
   return (
