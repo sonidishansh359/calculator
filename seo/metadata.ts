@@ -1,8 +1,8 @@
 export const SEO_CONFIG = {
   siteName: "Bharat Utility Hub",
   baseUrl: "https://bharatutilityhub.com",
-  defaultTitle: "Bharat Utility Hub | India's #1 Daily Utility Tools",
-  defaultDescription: "Free, fast, and accurate utility tools for Indian users. GST, EMI, Age, SIP, Gold calculators and more. All-in-one daily utility platform.",
+  defaultTitle: "Bharat Utility Hub | India's #1 Daily Utility Tools by Dishansh Soni",
+  defaultDescription: "Free, fast, and accurate utility tools for Indian users. GST, EMI, Age, SIP calculators and more. Built by Dishansh Soni from Nadiad.",
   twitterHandle: "@BharatUtilityHub",
 };
 
