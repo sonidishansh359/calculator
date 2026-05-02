@@ -52,7 +52,7 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { 
       name: "Tools", 
-      href: "#", 
+      href: "/#tools", 
       subLinks: [
         { name: "GST Calculator", href: "/gst-calculator" },
         { name: "EMI Calculator", href: "/emi-calculator" },
