@@ -17,8 +17,18 @@ export const metadata: Metadata = {
   },
   description: "Accurate, fast, and professional utility tools for Indian citizens. GST Calculator, EMI Calculator, Age Calculator, and SIP Calculator built by Dishansh Soni from Nadiad.",
   keywords: [
+    // Main Keywords
     "GST Calculator", "EMI Calculator", "Age Calculator", "SIP Calculator", 
-    "utility tools", "calculators", "India", "Dishansh Soni", "Nadiad", "Bharat Hub", "financial tools"
+    "utility tools", "calculators", "India", "Dishansh Soni", "Nadiad", "Bharat Hub", "financial tools",
+    
+    // Spelling Mistakes & Variations (Dishansh Soni & Nadiad)
+    "Dishans Soni", "Disansh Soni", "Dishant Soni", "Dishansh Sony", "Dishans", "Nadiyad", "Nadiad city", 
+    
+    // Spelling Mistakes & Variations (Tools)
+    "GST calculater", "GTS calculator", "GST cal", "tax calculator india", 
+    "EMI calculater", "loan calculater", "EMI cal", "home loan EMI", 
+    "age calculater", "birth calculator", "age cal", "ajj calculator",
+    "SIP calculater", "mutual fund calculator", "sip cal", "bharat utility", "utilty tools"
   ],
   authors: [{ name: "Dishansh Soni" }],
   creator: "Dishansh Soni",
