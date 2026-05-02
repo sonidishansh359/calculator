@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 interface ToolCardProps {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: React.ElementType;
   href: string;
   category: string;
   trending?: boolean;
@@ -20,7 +20,7 @@ const ToolCard = ({ title, description, icon, href, category, trending }: ToolCa
         
         <div className="flex items-start justify-between mb-4">
           <div className="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center text-brand-600 group-hover:bg-brand-50 dark:group-hover:bg-brand-900/20 transition-colors">
-            {icon}
+            {React.createElement(icon, { className: "w-5 h-5" })}
           </div>
           
           {trending && (

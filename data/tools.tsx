@@ -1,4 +1,3 @@
-import React from "react";
 import { 
   Percent, 
   Wallet, 
@@ -14,7 +13,7 @@ export interface Tool {
   id: string;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: React.ElementType;
   href: string;
   category: "Finance" | "Education" | "Gold" | "Health" | "Shopping";
   trending?: boolean;
@@ -25,7 +24,7 @@ export const tools: Tool[] = [
     id: "gst",
     title: "GST Calculator",
     description: "Calculate Add/Remove GST (3%, 5%, 12%, 18%, 28%) instantly for Indian businesses.",
-    icon: <Calculator className="w-6 h-6" />,
+    icon: Calculator,
     href: "/gst-calculator",
     category: "Finance",
     trending: true,
@@ -34,7 +33,7 @@ export const tools: Tool[] = [
     id: "emi",
     title: "EMI Calculator",
     description: "Calculate your monthly home, car, or personal loan EMIs with detailed breakdown.",
-    icon: <Wallet className="w-6 h-6" />,
+    icon: Wallet,
     href: "/emi-calculator",
     category: "Finance",
     trending: true,
@@ -43,7 +42,7 @@ export const tools: Tool[] = [
     id: "age",
     title: "Age Calculator",
     description: "Find your exact age in years, months, and days from your date of birth.",
-    icon: <Calendar className="w-6 h-6" />,
+    icon: Calendar,
     href: "/age-calculator",
     category: "Education",
     trending: true,
@@ -52,7 +51,7 @@ export const tools: Tool[] = [
     id: "sip",
     title: "SIP Calculator",
     description: "Estimate your future wealth from Mutual Fund SIP investments with expected returns.",
-    icon: <TrendingUp className="w-6 h-6" />,
+    icon: TrendingUp,
     href: "/sip-calculator",
     category: "Finance",
   },
@@ -60,7 +59,7 @@ export const tools: Tool[] = [
     id: "gold",
     title: "Gold Calculator",
     description: "Calculate gold price based on weight, purity, making charges, and GST.",
-    icon: <Coins className="w-6 h-6" />,
+    icon: Coins,
     href: "/gold-calculator",
     category: "Gold",
     trending: true,
@@ -69,7 +68,7 @@ export const tools: Tool[] = [
     id: "percentage",
     title: "Percentage Calculator",
     description: "Quickly calculate percentage gain/loss, exam marks, and general percentages.",
-    icon: <Percent className="w-6 h-6" />,
+    icon: Percent,
     href: "/percentage-calculator",
     category: "Education",
   },
@@ -77,7 +76,7 @@ export const tools: Tool[] = [
     id: "bmi",
     title: "BMI Calculator",
     description: "Check your Body Mass Index and health category based on height and weight.",
-    icon: <Activity className="w-6 h-6" />,
+    icon: Activity,
     href: "/bmi-calculator",
     category: "Health",
   },
@@ -85,7 +84,7 @@ export const tools: Tool[] = [
     id: "discount",
     title: "Discount Calculator",
     description: "Find your final savings and price after applying discounts and taxes.",
-    icon: <Tag className="w-6 h-6" />,
+    icon: Tag,
     href: "/discount-calculator",
     category: "Shopping",
   },

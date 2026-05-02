@@ -143,7 +143,7 @@ const Navbar = () => {
                           className="w-full text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-start gap-3 border-b border-slate-100 dark:border-slate-800/50 last:border-0"
                         >
                           <div className="text-brand-600 mt-0.5">
-                            {React.cloneElement(tool.icon as React.ReactElement, { className: "w-4 h-4" })}
+                            {React.createElement(tool.icon as React.ElementType, { className: "w-4 h-4" })}
                           </div>
                           <div>
                             <div className="text-sm font-semibold text-slate-900 dark:text-white">{tool.title}</div>
