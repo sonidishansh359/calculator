@@ -83,6 +83,12 @@ export default function RootLayout({
             gtag('config', 'G-77SWXJTWGL');
           `
         }} />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1927851272832708"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
