@@ -70,6 +70,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1927851272832708"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 min-h-screen flex flex-col`}>
         <Script
           strategy="afterInteractive"
@@ -83,12 +90,6 @@ export default function RootLayout({
             gtag('config', 'G-77SWXJTWGL');
           `
         }} />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1927851272832708"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
