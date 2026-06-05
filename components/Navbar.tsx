@@ -31,6 +31,8 @@ const Navbar = () => {
   const [loginLoading, setLoginLoading] = useState(false);
   const [loginError, setLoginError] = useState("");
   const [showAdminDropdown, setShowAdminDropdown] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
   
   const searchRef = useRef<HTMLDivElement>(null);
   const adminDropdownRef = useRef<HTMLDivElement>(null);
@@ -102,6 +104,9 @@ const Navbar = () => {
         setShowLoginModal(false);
         setUsername("");
         setPassword("");
+        setToastMessage("You are Super Admin now!");
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 5000);
       } else {
         setLoginError(data.error || "Invalid credentials");
       }
@@ -266,7 +271,9 @@ const Navbar = () => {
                       >
                         <div className="px-3 py-2 border-b border-slate-100 dark:border-slate-800/50 mb-1">
                           <p className="text-[10px] text-slate-400 font-medium uppercase tracking-wider">Logged In As</p>
-                          <p className="text-xs font-bold text-slate-700 dark:text-slate-200 truncate">Administrator</p>
+                          <p className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1 mt-0.5">
+                            <span>👑</span> Super Admin
+                          </p>
                         </div>
                         <button
                           onClick={handleLogout}
@@ -401,6 +408,32 @@ const Navbar = () => {
               </form>
             </motion.div>
           </div>
+        )}
+      </AnimatePresence>
+
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="fixed bottom-5 right-5 z-[250] max-w-sm w-full bg-slate-900/90 dark:bg-white/90 text-white dark:text-slate-900 border border-slate-800 dark:border-slate-200 rounded-xl shadow-2xl p-4 flex items-center gap-3 backdrop-blur-md"
+          >
+            <div className="p-2 bg-emerald-500 rounded-lg text-white">
+              <Lock className="w-5 h-5" />
+            </div>
+            <div className="flex-1">
+              <h4 className="text-sm font-bold">Successfully Authenticated</h4>
+              <p className="text-xs text-slate-300 dark:text-slate-600 font-semibold">{toastMessage}</p>
+            </div>
+            <button
+              onClick={() => setShowToast(false)}
+              className="p-1 text-slate-400 hover:text-white dark:hover:text-slate-950 transition-colors cursor-pointer"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
